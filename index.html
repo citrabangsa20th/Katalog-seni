@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#173d35" />
+    <meta name="description" content="Katalog Seni Open House SMA Citra Bangsa 2026 — jelajahi karya anyaman, wayang, dan komik siswa." />
+    <title>Katalog Seni — Open House SMA Citra Bangsa 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#beranda" aria-label="Katalog Seni CBS">
+        <span class="brand-mark">CBS</span>
+        <span class="brand-copy"><strong>CITRA BANGSA</strong><small>OPEN HOUSE 2026</small></span>
+      </a>
+      <a class="header-link" href="#katalog">Jelajahi karya <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero" id="beranda">
+        <div class="hero-grain"></div>
+        <div class="hero-content">
+          <p class="eyebrow"><span></span> OPEN HOUSE SMA CITRA BANGSA · 2026</p>
+          <h1>Karya yang punya<br /><em>cerita.</em></h1>
+          <p class="hero-description">Sebuah ruang untuk merayakan kreativitas, ketekunan, dan imajinasi siswa melalui karya seni.</p>
+          <a class="primary-button" href="#katalog">Lihat katalog <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-circle"></div>
+          <div class="art-card art-card-one">
+            <span>01</span>
+            <div class="woven-pattern"></div>
+          </div>
+          <div class="art-card art-card-two">
+            <span>02</span>
+            <div class="puppet-shape">✳</div>
+          </div>
+          <div class="art-card art-card-three">
+            <span>03</span>
+            <div class="comic-lines">BAM!<br /><small>cerita dimulai</small></div>
+          </div>
+          <div class="hero-note">Dibuat dengan<br />rasa dan cerita.</div>
+        </div>
+        <div class="hero-bottom"><span>GALERI KARYA SISWA</span><span>ANYAMAN · WAYANG · KOMIK</span></div>
+      </section>
+
+      <section class="intro section-wrap" id="katalog">
+        <div>
+          <p class="eyebrow dark-eyebrow">GALERI DIGITAL</p>
+          <h2>Jelajahi <em>karya.</em></h2>
+        </div>
+        <p class="intro-copy">Temukan beragam karya siswa SMA Citra Bangsa. Pilih kategori, lalu buka setiap karya untuk melihatnya lebih dekat.</p>
+      </section>
+
+      <section class="catalog section-wrap">
+        <div class="category-tabs" role="tablist" aria-label="Kategori karya">
+          <button class="category-tab active" role="tab" aria-selected="true" data-category="anyaman">Anyaman <span>10</span></button>
+          <button class="category-tab" role="tab" aria-selected="false" data-category="wayang">Wayang <span>6</span></button>
+          <button class="category-tab" role="tab" aria-selected="false" data-category="comic">Komik <span id="comic-count">—</span></button>
+        </div>
+        <div class="catalog-heading">
+          <div>
+            <p class="eyebrow dark-eyebrow" id="category-kicker">KATEGORI 01</p>
+            <h3 id="category-title">Anyaman</h3>
+          </div>
+          <p id="category-description">Pola, warna, dan ketelitian dalam setiap helai.</p>
+        </div>
+        <div class="art-grid" id="art-grid" aria-live="polite"></div>
+        <p class="empty-note" id="empty-note" hidden>Belum ada karya yang ditambahkan di kategori ini. Tambahkan data dan gambar melalui <code>script.js</code>.</p>
+      </section>
+
+      <section class="closing">
+        <div class="closing-inner">
+          <p class="eyebrow">OPEN HOUSE SMA CITRA BANGSA 2026</p>
+          <h2>Setiap karya punya<br /><em>ceritanya sendiri.</em></h2>
+          <p>Terima kasih telah memberi ruang bagi kreativitas siswa untuk tumbuh dan dikenal.</p>
+        </div>
+        <div class="closing-stamp">CBS<br /><span>2026</span></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 SMA Citra Bangsa</span>
+      <span>Katalog Seni · Open House</span>
+    </footer>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Detail karya">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Tutup detail">×</button>
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Karya sebelumnya">‹</button>
+      <div class="lightbox-content">
+        <div class="lightbox-image-wrap"><img id="lightbox-image" src="" alt="" /></div>
+        <div class="lightbox-info">
+          <p class="eyebrow" id="lightbox-category">KARYA SISWA</p>
+          <h2 id="lightbox-title">Judul karya</h2>
+          <p id="lightbox-artist"></p>
+          <p id="lightbox-description" class="lightbox-description"></p>
+          <div class="comic-controls" id="comic-controls" hidden>
+            <button id="page-prev" aria-label="Halaman sebelumnya">←</button>
+            <span id="page-indicator">Halaman 1 dari 1</span>
+            <button id="page-next" aria-label="Halaman berikutnya">→</button>
+          </div>
+        </div>
+      </div>
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Karya berikutnya">›</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
